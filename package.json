@@ -1,0 +1,21 @@
+{
+  "name": "epistyle",
+  "version": "0.1.0",
+  "description": "Enhanced inline style objects",
+  "author": "Ryan Tsao <ryan.j.tsao@gmail.com>",
+  "main": "index.js",
+  "homepage": "https://github.com/rtsao/epistyle",
+  "repository": "git@github.com:rtsao/epistyle.git",
+  "bugs": "https://github.com/rtsao/epistyle/issues",
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "dependencies": {
+    "base62": "^1.1.0",
+    "string-hash": "^1.1.0"
+  },
+  "devDependencies": {
+    "tape": "^4.5.1"
+  },
+  "license": "MIT"
+}
