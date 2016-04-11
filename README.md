@@ -6,6 +6,28 @@
 
 Enhanced inline style objects
 
+## Usage
+
+```js
+const epistyle = require('epistyle/passthrough');
+
+const {styles, css, className} = epistyle({
+  color: 'red',
+  ':hover': {
+    color: 'blue'
+  }
+});
+
+console.log(styles);
+// => {color: "red"}
+
+console.log(css);
+// => "._style_1KAmyC:hover {\n  color: blue !important\n}"
+
+console.log(className);
+// => "_style_1KAmyC"
+```
+
 [build-badge]: https://travis-ci.org/rtsao/epistyle.svg?branch=master
 [build-href]: https://travis-ci.org/rtsao/epistyle
 [deps-badge]: https://david-dm.org/rtsao/epistyle.svg
