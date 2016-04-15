@@ -10,10 +10,7 @@
   "scripts": {
     "test": "node test/index.js"
   },
-  "dependencies": {
-    "base62": "^1.1.0",
-    "string-hash": "^1.1.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "tape": "^4.5.1"
   },

@@ -1,6 +1,6 @@
 'use strict';
 
-var hashSuffix = require('./lib/hash');
+var hashSuffix = require('./lib/generate-suffix');
 var convertToCss = require('./lib/obj-to-css');
 
 module.exports = epistyle;
