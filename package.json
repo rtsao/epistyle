@@ -1,6 +1,6 @@
 {
   "name": "epistyle",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Enhanced inline style objects",
   "author": "Ryan Tsao <ryan.j.tsao@gmail.com>",
   "main": "index.js",
