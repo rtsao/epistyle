@@ -10,7 +10,7 @@ function passthrough(styles) {
   var scoped = epistyle(partitioned.toCss);
 
   return {
-    styles: partitioned.valid,
+    passthrough: partitioned.valid,
     css: scoped.css,
     className: scoped.className
   };

@@ -11,14 +11,14 @@ Enhanced inline style objects
 ```js
 const epistyle = require('epistyle/passthrough');
 
-const {styles, css, className} = epistyle({
+const {passthrough, css, className} = epistyle({
   color: 'red',
   ':hover': {
     color: 'blue'
   }
 });
 
-console.log(styles);
+console.log(passthrough);
 // => {color: "red"}
 
 console.log(css);

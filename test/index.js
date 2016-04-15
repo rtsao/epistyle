@@ -13,7 +13,7 @@ test('basic usage', function(t) {
 
 test('basic passthrough usage', function(t) {
   var result = passthrough({color: 'red', ':hover': {color: 'blue'}});
-  t.deepEqual(result.styles, {color: 'red'});
+  t.deepEqual(result.passthrough, {color: 'red'});
   t.equal(result.css, '._style_1KAmyC:hover {\n  color: blue !important\n}');
   t.equal(result.className, '_style_1KAmyC');
   t.end();
