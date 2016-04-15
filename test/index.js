@@ -18,3 +18,10 @@ test('basic passthrough usage', function(t) {
   t.equal(result.className, '_style_1KAmyC');
   t.end();
 });
+
+test('empty object case', function(t) {
+  var result = epistyle({});
+  t.equal(result.css, '', 'no css');
+  t.equal(result.className, '', 'no class name');
+  t.end();
+});
