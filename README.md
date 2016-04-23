@@ -14,7 +14,7 @@ const epistyle = require('epistyle/passthrough');
 const {passthrough, css, className} = epistyle({
   color: 'red',
   ':hover': {
-    color: 'blue'
+    color: ['rgba(0,75,255,0.8)', 'blue']
   }
 });
 
@@ -22,10 +22,10 @@ console.log(passthrough);
 // => {color: "red"}
 
 console.log(css);
-// => "._style_1KAmyC:hover {\n  color: blue !important\n}"
+// => "._style_2wKC1:hover {\n  color: blue !important;\n  color: rgba(0,75,255,0.8) !important\n}"
 
 console.log(className);
-// => "_style_1KAmyC"
+// => "_style_2wKC1"
 ```
 
 [build-badge]: https://travis-ci.org/rtsao/epistyle.svg?branch=master
