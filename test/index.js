@@ -25,3 +25,17 @@ test('empty object case', function(t) {
   t.equal(result.className, '', 'no class name');
   t.end();
 });
+
+test('basic fallback', function(t) {
+  var result = epistyle({color: 'green', foo: ['bar', 'baz']});
+  t.equal(result.css, '._style_2uPGMZ {\n  color: green !important;\n  foo: baz !important;\n  foo: bar !important\n}');
+  t.equal(result.className, '_style_2uPGMZ');
+  t.end();
+});
+
+test('basic fallback', function(t) {
+  var result = epistyle({color: 'green', ':hover': {foo: ['bar', 'baz']}});
+  t.equal(result.css, '._style_2M9tSJ {\n  color: green !important\n}\n._style_2M9tSJ:hover {\n  foo: baz !important;\n  foo: bar !important\n}');
+  t.equal(result.className, '_style_2M9tSJ');
+  t.end();
+});
