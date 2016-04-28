@@ -39,3 +39,10 @@ test('basic fallback', function(t) {
   t.equal(result.className, '_style_2M9tSJ');
   t.end();
 });
+
+test('only fallback', function(t) {
+  var result = epistyle({color: ['green', 'blue']});
+  t.equal(result.css, '._style_1inWfp {\n  color: blue !important;\n  color: green !important\n}');
+  t.equal(result.className, '_style_1inWfp');
+  t.end();
+});
