@@ -6,6 +6,8 @@
 
 Enhanced inline style objects
 
+Adds support for media queries, psuedo classes, and fallback values via generation of scoped CSS.
+
 ## Usage
 
 ```js
