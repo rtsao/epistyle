@@ -4,9 +4,13 @@ var epistyle = require('./');
 
 module.exports = passthrough;
 
-function passthrough(styles) {
+function passthrough(styles, opts) {
+  var opt = opts || {};
+  opt.important = (opts && typeof opts.important !== 'undefined')
+    ? opts.important : true;
+
   var partitioned = partitionStyles(styles);
-  var scoped = epistyle(partitioned.toCss);
+  var scoped = epistyle(partitioned.toCss, opt);
 
   return {
     passthrough: partitioned.valid,
