@@ -11,6 +11,22 @@ test('basic usage', function(t) {
   t.end();
 });
 
+test('correct sort', function(t) {
+  var result = epistyle({
+    '@media (max-width: 400px)': {
+      ':hover': {
+        zIndex: 3
+      },
+      zIndex: 2
+    },
+    ':hover': {zIndex: 1},
+    zIndex: 1
+  });
+  t.equal(result.css, '._style_2gWvJY {\n  z-index: 1 !important\n}\n._style_2gWvJY:hover {\n  z-index: 1 !important\n}\n@media (max-width: 400px) {\n._style_2gWvJY {\n  z-index: 2 !important\n}\n}\n@media (max-width: 400px) {\n._style_2gWvJY:hover {\n  z-index: 3 !important\n}\n}');
+  t.equal(result.className, '_style_2gWvJY');
+  t.end();
+});
+
 test('basic passthrough usage', function(t) {
   var result = passthrough({color: 'red', ':hover': {color: 'blue'}});
   t.deepEqual(result.passthrough, {color: 'red'});
