@@ -15,7 +15,7 @@ function epistyle(styles) {
   var scoped = convertToCss({
     selector: scopedClass,
     prefix: ''
-  }, styles);
+  }, styles, void 0, true);
 
   return {
     css: scoped.join('\n'),
